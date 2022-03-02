@@ -23,16 +23,14 @@ section {
 }
 
 /* Style the navigation menu */
-nav {
-  -webkit-flex: 1;
-  -ms-flex: 1;
+.izquierda {
   flex: 1;
   background: #ccc;
   padding: 20px;
 }
 
 /* Style the list inside the menu */
-nav ul {
+.izquierda ul {
   list-style-type: none;
   padding: 0;
 }
@@ -57,9 +55,62 @@ footer {
 .lateralfijo{
   position: fixed;
   right: 0;
-  bottom: 50%;
-  width: 400px;
-  background-color: red;
+  width: 60px;
+  height: 150px;
+  background-color: pink;
+  border-style: solid;
+  border-color: green;
+  border-width: 5px;
+  border-right-style: none;
+  margin: 0;
+}
+
+.lateralfijo ul li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.lateralfijo ul {
+  padding-left: 0px;
+  margin: 5px;
+}
+
+.lateralfijo ul li a img {
+  max-width: 40px;
+  height: 40px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+nav ul li{
+  float: left;
+  border-right: 1px solid #bbb;
+}
+
+nav ul li:last-child{
+  border-right: none;
+}
+
+nav ul li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #111;
+}
+
+.active{
+  background-color: #04AA6D;
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
