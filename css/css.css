@@ -9,10 +9,10 @@ body {
 
 /* Style the header */
 header {
-  background-color: #666;
+  background-color: #27AE60;
   padding: 30px;
   text-align: center;
-  font-size: 35px;
+  font-size: 20px;
   color: white;
 }
 
@@ -22,17 +22,35 @@ section {
   display: flex;
 }
 
-/* Style the navigation menu */
+/* Style the navigation menu 
 .izquierda {
   flex: 1;
-  background: #ccc;
+  background: #EB984E;
   padding: 20px;
 }
+*/
 
-/* Style the list inside the menu */
+/* Style the list inside the menu 
 .izquierda ul {
   list-style-type: none;
   padding: 0;
+}
+*/
+
+.column {
+  float: left;
+  width: 20%;
+  padding: 15px;
+  background-color: red;
+  border: solid black 4px;
+}
+
+.column2 {
+  float: left;
+  width: 70%;
+  padding: 15px;
+  background-color: red;
+  border: solid black 4px;
 }
 
 /* Style the content */
@@ -55,7 +73,7 @@ footer {
   right: 0;
   width: 60px;
   height: 150px;
-  background-color: pink;
+  background-color: #F8C471;
   border-style: solid;
   border-color: green;
   border-width: 5px;
@@ -111,9 +129,30 @@ nav ul li a:hover {
   background-color: #04AA6D;
 }
 
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other 
 @media (max-width: 600px) {
   section {
     -webkit-flex-direction: column;
     flex-direction: column;
+    width: 100%;
   }
+
+*/
+
+@media (max-width: 600px) {
+  .column2{
+    width: 100%;
+  }
+
+  .column{
+    width: 0%;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .column{
+    width: 30%;
+  }
+
+}
