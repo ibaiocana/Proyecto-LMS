@@ -129,30 +129,13 @@ nav ul li a:hover {
   background-color: #04AA6D;
 }
 
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other 
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
 @media (max-width: 600px) {
   section {
     -webkit-flex-direction: column;
     flex-direction: column;
-    width: 100%;
   }
 
-*/
-
-@media (max-width: 600px) {
   .column2{
     width: 100%;
   }
-
-  .column{
-    width: 0%;
-  }
-
-}
-
-@media (max-width: 800px) {
-  .column{
-    width: 30%;
-  }
-
-}
