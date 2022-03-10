@@ -7,7 +7,7 @@ body {
   margin: 0;
 }
 
-/* Style the header */
+/* Estilos para el header */
 header {
   background-color: #519259;
   padding: 30px;
@@ -16,84 +16,9 @@ header {
   color: white;
 }
 
-/* Container for flexboxes */
-section {
-  display: -webkit-flex;
-  display: flex;
-}
+/* ------------------------ */
 
-/* Style the navigation menu 
-.izquierda {
-  flex: 1;
-  background: #EB984E;
-  padding: 20px;
-}
-*/
-
-/* Style the list inside the menu 
-.izquierda ul {
-  list-style-type: none;
-  padding: 0;
-}
-*/
-
-.column {
-  float: left;
-  width: 20%;
-  padding: 15px;
-  background-color: #C64756;
-  border: solid black 4px;
-  border-left-style: none;
-  border-right-style: none;
-}
-
-.column2 {
-  float: left;
-  width: 70%;
-  padding: 15px;
-  background-color: #4A4B4A;
-  border: solid black 4px;
-  border-right-style: none;
-}
-
-/* Style the content */
-article {
-  flex: 3;
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
-/* Style the footer */
-footer {
-  background-color: #2F302F;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-.lateralfijo{
-  position: fixed;
-  right: 0;
-  width: 60px;
-  height: 140px;
-  background-color: #C64756;
-  margin: 0;
-}
-
-.lateralfijo ul li{
-  text-decoration: none;
-  list-style-type: none;
-}
-
-.lateralfijo ul {
-  padding-left: 0px;
-  margin: 5px;
-}
-
-.lateralfijo ul li a img {
-  max-width: 40px;
-  height: 40px;
-}
+/* Estilos del nav */
 
 nav ul {
   list-style-type: none;
@@ -128,21 +53,42 @@ nav ul li a:hover {
   background-color: #04AA6D;
 }
 
-/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-@media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
+/* ------------------------ */
 
-  .column{
-    width: 100%;
-  }
+/* Flexbox para el section */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
 
-  .column2{
-    width: 100%;
-    height: auto;
-  }
+/* ------------------------ */
+
+/* Estilos para el section */
+
+.column {
+  float: left;
+  flex: 20%;
+  padding: 15px;
+  background-color: #C64756;
+  border: solid black 4px;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+.column2 {
+  float: left;
+  flex: 80%;
+  padding: 15px;
+  background-color: #4A4B4A;
+  border: solid black 4px;
+  border-right-style: none;
+}
+
+article {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f1f1f1;
+  padding: 10px;
 }
 
 .column ul{
@@ -175,6 +121,8 @@ nav ul li a:hover {
 }
 
 .lanzamientos{
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
@@ -183,14 +131,13 @@ nav ul li a:hover {
 }
 
 .objetoLanzamientos{
-  position: flex;
   display: inline-block;
   float: left;
-  width: 13%;
+  flex: 13%;
 }
 
 .objetoLanzamientos img{
-  width: 90%;
+  max-width: 90%;
   height: auto;
 }
 
@@ -212,4 +159,194 @@ nav ul li a:hover {
 .objetoLanzamientos a{
   text-decoration: none;
   color: black;
+}
+
+/* ------------------------ */
+
+/* Estilos para el footer */
+footer {
+  background-color: #2F302F;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+footer img{
+  width: 20px;
+  height: 15px;
+  background-color: white;
+}
+
+#contenedor{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 400px;
+}
+
+#sobrenosotros{
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-left: 300px;
+  margin-top: 50px;
+  width: 15%;
+  height: auto;
+}
+
+footer ul li{
+  list-style: none;
+}
+
+.union{
+  display: inline-block;
+}
+
+#separador{
+  display: inline-block;
+  position: relative;
+  width: 2px;
+  height: auto;
+  border-left-style: solid;
+  border-left-color: #C64756;
+  border-left-width: 3px;
+  margin-left: 30px;
+}
+
+#pago{
+  display: inline-block;
+  position: relative;
+  width: auto;
+  height: auto;
+  margin-left: 20px;
+}
+
+#pago img{
+  width: auto;
+  height: auto;
+}
+
+.lateralfijo{
+  position: fixed;
+  right: 0;
+  width: 60px;
+  height: 140px;
+  background-color: #C64756;
+  margin: 0;
+}
+
+.lateralfijo ul li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.lateralfijo ul {
+  padding-left: 0px;
+  margin: 5px;
+}
+
+.lateralfijo ul li a img {
+  max-width: 40px;
+  height: 40px;
+}
+
+/* ------------------------ */
+
+/* Media queries para el tamaño de la pagina */
+@media (max-width: 1200px) {
+
+  .column2{
+    width: 100%;
+    height: auto;
+  }
+
+  .column2 h2{
+    width: auto;
+  }
+
+  #contenedor{
+    width: auto;
+    height: auto;
+  }
+
+  .objetoLanzamientos{
+    flex: 25%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .column{
+    width: 100%;
+    height: auto;
+  }
+
+  .column2{
+    width: 100%;
+    height: auto;
+  }
+
+  .column2 h2{
+    width: auto;
+  }
+
+  #contenedor{
+    width: 100%;
+    height: auto;
+  }
+
+  #pago{
+    flex: 100%;
+    width: auto;
+  }
+
+  .objetoLanzamientos{
+    flex: 25%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .column{
+    width: 100%;
+    height: auto;
+  }
+
+  .column2{
+    width: 100%;
+    height: auto;
+  }
+
+  .column2 h2{
+    width: auto;
+  }
+
+  #contenedor{
+    width: 100%;
+    height: auto;
+  }
+
+  #contenedor *{
+    flex: 100%;
+    margin-left: 0px;
+  }
+
+  .objetoLanzamientos{
+    flex: 100%;
+    max-width: 50%;
+  }
+
+  /* ------------------------ */
 }
