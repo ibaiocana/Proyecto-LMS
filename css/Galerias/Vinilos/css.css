@@ -82,110 +82,82 @@ li.dropdown {
 
 /* ------------------------ */
 
-/* Flexbox para el section */
-section {
-  display: -webkit-flex;
-  display: flex;
+/* Estilos para lateral fijo */
+
+.lateralfijo{
+  position: fixed;
+  right: 0;
+  width: 60px;
+  height: 140px;
+  background-color: #C64756;
+  margin: 0;
+  z-index: 99;
+}
+
+.lateralfijo ul li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.lateralfijo ul {
+  padding-left: 0px;
+  margin: 5px;
+}
+
+.lateralfijo ul li a img {
+  max-width: 40px;
+  height: 40px;
 }
 
 /* ------------------------ */
 
-/* Estilos para el section */
+/* Estilos para la galeria gap */
 
-.column {
-  float: left;
-  flex: 20%;
-  padding: 15px;
-  background-color: #C64756;
-  border: solid black 4px;
-  border-left-style: none;
-  border-right-style: none;
-}
-
-.column2 {
-  float: left;
-  flex: 80%;
-  padding: 15px;
-  background-color: #4A4B4A;
-  border: solid black 4px;
-  border-right-style: none;
-}
-
-article {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
-.column ul{
-  padding: 10px;
-}
-
-.column ul li img{
-  width: 100%;
-  height: 200px;
-}
-
-.column ul li p{
+section h2{
   text-align: center;
-  font-family: cursive;
+  position: relative;
+  height: auto;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #2196F3;
 }
 
-.column ul li p a{
-  text-decoration: none;
-  color: black;
+.grid-container {
+  display: grid;
+  gap: 50px 0px;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #2196F3;
+  padding: 10px;
+  padding-left: 15%;
+  padding-bottom: 50px;
 }
 
-.titulo{
-  background-color: black;
+.grid-item {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+.grid-item img{
+  display: table-cell;
+  vertical-align: middle;
+  width: 250px;
+  height: 250px;
+}
+
+.titulovinilo{
+  position: absolute;
+  bottom: 0;
+  text-align: left;
+  font-size: 15px;
   color: white;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.lanzamientos{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  height: 38%;
-}
-
-.objetoLanzamientos{
-  display: inline-block;
-  float: left;
-  flex: 13%;
-}
-
-.objetoLanzamientos img{
-  max-width: 90%;
-  height: auto;
-}
-
-.objetoLanzamientos hr{
-  display: inline-block;
-  width: 90%;
-  background-color: red;
-  border-color: black;
-  height: 4px;
-  margin-bottom: 0;
-}
-
-.objetoLanzamientos p{
-  width: 90%;
-  height: auto;
-  margin: 5px;
-}
-
-.objetoLanzamientos a{
-  text-decoration: none;
-  color: black;
+  background: linear-gradient(rgba(255, 255, 255, 0),rgba(0, 0, 0, 1));
+  width: 100%;
+  margin: 0;
+  padding: 10px;
 }
 
 /* ------------------------ */
@@ -255,43 +227,13 @@ footer ul li{
   height: auto;
 }
 
-.lateralfijo{
-  position: fixed;
-  right: 0;
-  width: 60px;
-  height: 140px;
-  background-color: #C64756;
-  margin: 0;
-  z-index: 99;
-}
-
-.lateralfijo ul li{
-  text-decoration: none;
-  list-style-type: none;
-}
-
-.lateralfijo ul {
-  padding-left: 0px;
-  margin: 5px;
-}
-
-.lateralfijo ul li a img {
-  max-width: 40px;
-  height: 40px;
-}
-
 /* ------------------------ */
 
 /* Media queries para el tamaño de la pagina */
 @media (max-width: 1200px) {
 
-  .column2{
-    width: 100%;
-    height: auto;
-  }
-
-  .column2 h2{
-    width: auto;
+  .grid-container{
+    grid-template-columns: repeat(2, 1fr);
   }
 
   #contenedor{
@@ -306,23 +248,9 @@ footer ul li{
 }
 
 @media (max-width: 800px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
 
-  .column{
-    width: 100%;
-    height: auto;
-  }
-
-  .column2{
-    width: 100%;
-    height: auto;
-  }
-
-  .column2 h2{
-    width: auto;
+  .grid-container{
+    grid-template-columns: repeat(1, 1fr);
   }
 
   #contenedor{
@@ -342,23 +270,9 @@ footer ul li{
 }
 
 @media (max-width: 600px) {
-  section {
-    -webkit-flex-direction: column;
-    flex-direction: column;
-  }
 
-  .column{
-    width: 100%;
-    height: auto;
-  }
-
-  .column2{
-    width: 100%;
-    height: auto;
-  }
-
-  .column2 h2{
-    width: auto;
+  .grid-container{
+    grid-template-columns: repeat(1, 1fr);
   }
 
   #contenedor{
