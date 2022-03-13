@@ -12,8 +12,17 @@ header {
   background-color: #519259;
   padding: 30px;
   text-align: center;
-  font-size: 20px;
-  color: white;
+}
+
+header img{
+  width: 15%;
+  height: 15%;
+}
+
+/* Efecto CSS Avanzado*/
+header img:hover{
+  -webkit-transform:scale(1.3);transform:scale(1.3);
+  overflow:hidden;
 }
 
 /* ------------------------ */
@@ -43,6 +52,8 @@ nav ul li a{
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  /* Efecto CSS Avanzado*/
+  text-shadow: 2px 2px 4px #000000;
 }
 
 nav ul li a:hover {
@@ -82,6 +93,40 @@ li.dropdown {
 
 /* ------------------------ */
 
+/* Estilos lateral fijo*/
+
+.lateralfijo{
+  position: fixed;
+  right: 0;
+  width: 60px;
+  height: 140px;
+  background-color: #C64756;
+  margin: 0;
+  z-index: 99;
+}
+
+.lateralfijo ul li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.lateralfijo ul {
+  padding-left: 0px;
+  margin: 5px;
+}
+
+.lateralfijo ul li a img {
+  max-width: 40px;
+  height: 40px;
+}
+
+/* Efecto CSS Avanzado*/
+.lateralfijo ul li a img:hover{
+  filter: opacity(.5);
+}
+
+/* ------------------------ */
+
 /* Flexbox para el section */
 section {
   display: -webkit-flex;
@@ -100,6 +145,13 @@ section {
   border: solid black 4px;
   border-left-style: none;
   border-right-style: none;
+}
+
+.column h4{
+  font-family: Cambria,sans-serif;
+
+  /* Efecto CSS Avanzado*/
+  text-shadow: 2px 2px 5px white;
 }
 
 .column2 {
@@ -127,6 +179,11 @@ article {
   height: 200px;
 }
 
+/* Efecto CSS Avanzado*/
+.column ul li img:hover{
+  filter: opacity(.5);
+}
+
 .column ul li p{
   text-align: center;
   font-family: cursive;
@@ -135,16 +192,27 @@ article {
 .column ul li p a{
   text-decoration: none;
   color: black;
+  font-family: Cambria,sans-serif;
+  /* Efecto CSS Avanzado*/
+  text-shadow: 2px 2px 5px white
+  
 }
 
 .titulo{
-  background-color: black;
+  background-color: #519259;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
   width: 30%;
   margin-left: auto;
   margin-right: auto;
+  font-family: Cambria,sans-serif;
+
+  /* Efecto CSS Avanzado*/
+  box-shadow: 10px 10px 5px #333;
+
+  /* Efecto CSS Avanzado*/
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .lanzamientos{
@@ -168,10 +236,16 @@ article {
   height: auto;
 }
 
+/* Efecto CSS Avanzado*/
+.objetoLanzamientos img:hover{
+  -webkit-transform:scale(1.3);transform:scale(1.3);
+  overflow:hidden;
+}
+
 .objetoLanzamientos hr{
   display: inline-block;
   width: 90%;
-  background-color: red;
+  background-color: #C64756;
   border-color: black;
   height: 4px;
   margin-bottom: 0;
@@ -185,7 +259,11 @@ article {
 
 .objetoLanzamientos a{
   text-decoration: none;
-  color: black;
+  color: white;
+  font-family: Garamond,Baskerville,Baskerville Old Face,Hoefler Text,Times New Roman,serif; 
+  /* Efecto CSS Avanzado*/
+  text-shadow: 2px 2px 4px #000000;
+  
 }
 
 /* ------------------------ */
@@ -253,31 +331,6 @@ footer ul li{
 #pago img{
   width: auto;
   height: auto;
-}
-
-.lateralfijo{
-  position: fixed;
-  right: 0;
-  width: 60px;
-  height: 140px;
-  background-color: #C64756;
-  margin: 0;
-  z-index: 99;
-}
-
-.lateralfijo ul li{
-  text-decoration: none;
-  list-style-type: none;
-}
-
-.lateralfijo ul {
-  padding-left: 0px;
-  margin: 5px;
-}
-
-.lateralfijo ul li a img {
-  max-width: 40px;
-  height: 40px;
 }
 
 /* ------------------------ */
